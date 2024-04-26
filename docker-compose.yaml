@@ -40,3 +40,15 @@ services:
         - 8080:8080
       depends_on:
         - postgres
+  app:
+    build:
+      context: app
+    ports:
+      - 3000:3000
+    stdin_open: true
+    volumes:
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: always
+    depends_on:
+      - keycloak
