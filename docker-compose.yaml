@@ -23,12 +23,12 @@ services:
           - spi-theme-cache-themes:false
           - spi-theme-cache-templates:false
       environment:
-        DB_VENDOR: MYSQL
-        DB_ADDR: db-sec24-aws.c68n000heunh.us-east-1.rds.amazonaws.com
+        DB_VENDOR: POSTGRES
+        DB_ADDR: postgres
         DB_DATABASE: keycloak
-        DB_USER: admin
+        DB_USER: keycloak
         DB_SCHEMA: public
-        DB_PASSWORD: adminsec24
+        DB_PASSWORD: password
         KEYCLOAK_USER: admin
         KEYCLOAK_PASSWORD: Pa55w0rd
 
