@@ -48,7 +48,6 @@ services:
     stdin_open: true
     volumes:
       - ./app:/usr/src/app
-      - /usr/src/app/node_modules
     restart: always
     depends_on:
       - keycloak
